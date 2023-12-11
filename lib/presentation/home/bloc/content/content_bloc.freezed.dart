@@ -775,10 +775,10 @@ class __$$SuccessImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? content = freezed,
+    Object? content = null,
   }) {
     return _then(_$SuccessImpl(
-      freezed == content
+      null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as ContentResponseModel,
@@ -804,12 +804,11 @@ class _$SuccessImpl implements _Success {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessImpl &&
-            const DeepCollectionEquality().equals(other.content, content));
+            (identical(other.content, content) || other.content == content));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(content));
+  int get hashCode => Object.hash(runtimeType, content);
 
   @JsonKey(ignore: true)
   @override

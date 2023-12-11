@@ -1,8 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'package:flutter_cbt_app/data/datasources/content_remote_datasource.dart';
-
+import '../../../../data/datasources/content_remote_datasource.dart';
 import '../../../../data/models/responses/content_response_model.dart';
 
 part 'content_bloc.freezed.dart';
